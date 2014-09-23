@@ -35,6 +35,7 @@ gem 'devise'
 group :development, :test do
   # Use RSpec/Capybara as the default testing framework
   gem 'rspec-rails'
+  gem 'shoulda-matchers', require: false
   gem 'capybara'
 end
 
