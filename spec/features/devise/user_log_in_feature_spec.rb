@@ -7,7 +7,8 @@ describe 'User Log in Feature' do
       password: '123123123',
       gender: :male,
       username: 'jack',
-      birthday: '16-09-1989'
+      birthday: '16-09-1989',
+      confirmed_at: Date.today
     )
   end
 
