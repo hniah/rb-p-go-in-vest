@@ -1,7 +1,15 @@
 require 'rails_helper'
 
 describe 'User Log in Feature' do
-  before { User.create(email: 'jack@example.com', password: '123123123', gender: :male) }
+  before do
+    User.create(
+      email: 'jack@example.com',
+      password: '123123123',
+      gender: :male,
+      username: 'jack',
+      birthday: '16-09-1989'
+    )
+  end
 
   it 'allows user to log in' do
     visit root_path
