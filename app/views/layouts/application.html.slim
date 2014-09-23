@@ -1,10 +1,22 @@
+doctype html
 html
   head
     title GoInvest
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    .notice= notice
-    .alert= alert
-    = yield
+    = flash_messages
+    .container
+      .row
+        .col-md-12
+          ul.nav.nav-pills
+            - unless user_signed_in?
+              li.dropdown= link_to 'Sign In', new_user_session_path
+              li.dropdown= link_to 'Sign Up', new_user_registration_path
+            - if user_signed_in?
+              li.dropdown= "Welcome, #{current_user.email}"
+
+        = yield
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true

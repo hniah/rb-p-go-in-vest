@@ -35,8 +35,8 @@ gem 'slim'
 gem 'devise'
 gem 'enumerize'
 
-# Use Formtastic as default form builder
-gem 'formtastic', '~> 3.0'
+gem 'simple_form'
+gem 'rails_utils'
 
 group :development, :test do
   # Use RSpec/Capybara as the default testing framework
