@@ -30,6 +30,8 @@ gem 'spring',        group: :development
 # Use slim as the default template engine
 gem 'slim'
 
+gem 'devise'
+
 group :development, :test do
   # Use RSpec/Capybara as the default testing framework
   gem 'rspec-rails'
